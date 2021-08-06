@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Egroceryrecom.engine</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2 class="container-heading"; style="font-size: x-large;color:darkcyan;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;"><span class="heading_font">E-Grocery Recommendation Engine</span></h2>
+
+        </div>
+
+        <div class="ml-container">
+            <form action = "/submit" method="POST">
+                <br>
+                <br>
+                <h3 style="border: 10%;font-size: larger;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;color:darkslategrey">Please Enter the username to get the Recommended Items</h3>
+                <input style="text-align: center;" id = 'user'name = 'user'placeholder="username" required = 'required'>
+                <br>
+                <br>
+                <h3 style="border: 10%;font-size: larger;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;color:darkslategrey">Please Enter the no. of items to be Recommended</h3>
+                <input style="text-align: center;" id="items" name = 'items' placeholder="items"required= 'required'>
+                <br>
+                <br>
+                <button id="sub" type="submit ">Submit</button>
+                <br>
+                <br>
+                <br>
+
+            </form>
+        </div>
+        <style>
+            body
+            {
+               
+                background-image:url("{{url_for('static',filename = 'pexels-ksenia-chernaya-3952051.jpg') }}");
+                height: 100% ;
+                
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 400%;
+            }
+
+            body 
+            {
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .container-heading
+            {
+                margin: 0;
+            }
+
+            h3 
+            {
+                font-size: x-large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-style: italic;
+                font-feature-settings: "abvf";
+                color: snow;
+            }
+
+            .heading_font{
+                font-family: 'Pacifico';
+                font-size: 50px;
+            }
+
+            #user 
+            {
+
+                width: 200 px;
+                height: 70 px;
+                text-align: center;
+                border-radius: 20px;
+                font-size: 20px;
+            }
+            #items
+            {
+                width: 50 px;
+                height: 20 px;
+                text-align: center;
+                border-radius: 14px;
+                font-size: 20px;
+
+            }
+
+            #sub 
+            {
+                width: 120px;
+                height: 35px;
+                text-align: center;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+        </style>
+    </body>
+</html>

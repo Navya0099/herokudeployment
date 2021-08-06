@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-sclae =1.0">
+    <title>Recommended items</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="container-heading" style="text-align: center;"><span class="heading_font">Recommended Items</span></h2>
+        <h2 style="text-align: center;">{{output}}</h2>
+    </div>
+    <br><br><br>
+
+
+    <style>
+    body
+    {
+    background-image: url("{{url_for('static',filename = 'pexels-ksenia-chernaya-3952051.jpg') }}");
+    height:100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+
+    .container-heading{
+        margin:0;
+    }
+
+    .heading_font{
+        color:darkcyan;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 50px;
+        text-align: center;
+        font-weight: 550;
+        
+    }
+    h2
+    {
+        font-size: x-large;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+        font-feature-settings: "abvf";
+        color:black;
+    }
+    </style>
+</body>
+</html>

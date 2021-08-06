@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Egroceryrecom.engine</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2 class="container-heading"; style="font-size: x-large;color:darkcyan;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;"><span class="heading_font">E-Grocery Recommendation Engine</span></h2>
+
+        </div>
+
+        <div class="ml-container">
+            <form action = "/choose" method="POST">
+                <br>
+                <br>
+                <h2 style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sas-serif;font-size:x-large;color: black;"><strong> Choose the Recommendation source </strong></h3>
+                <br>
+                <h3 style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sas-serif;font-size:x-large;color:black;"><strong> Select User / Item </strong></h3>
+                <select id="first" class="form-input align-center" name="Choose User or Item">
+                    <option value="none"> Item </option>
+                    <option value="User">User</option>
+                </select>
+                <br>
+                <br>
+                <br>
+                <button id="sub" type="submit ">Submit</button>
+                <br>
+                <br>
+                <br>
+
+            </form>
+        </div>
+        <style>
+    
+            body{
+                background-image:url("{{url_for('static',filename = 'stories-H0se-FiDhoc-unsplash.jpg') }}");
+                height: 100% ;
+                
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100% 400%;
+            }
+
+            body{
+                font-family: Arial, Helvetica,sans-serif;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+	            height: 100%;
+	            display: flex;
+	            flex-direction: column;
+            }
+
+
+            .container-heading
+            {
+                margin: 0;
+            }
+
+            #first {
+                width: 200px;
+                height: 35px;
+                text-align: center;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+
+            .heading_font{
+                font-family: 'Pacifico';
+                font-size: 50px;
+            }
+
+            #sub {
+                width: 120px;
+                height: 35px;
+                text-align: center;
+                border-radius: 14px;
+                font-size: 18px;
+            }
+        </style>
+    </body>
+</html>

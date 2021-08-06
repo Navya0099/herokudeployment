@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> E-groceryRecom.Engine</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="container-heading" style="background-color: black;"><span class="heading_font">E-Grocery Recommendation Engine</span></h2>
+            <div class="ml-container">
+                <form action="{{url_for ('predict') }}" method="POST">
+                    <br>
+                    <h2 style="text-align: center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: x-large;color: aliceblue;">Choose the User Name and Items bought</h2>
+                    <h3 style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:x-large;color: aliceblue;"><strong> Fruits</strong></h3>
+                    <select name="Fruits" id="Fruits" multiple size = "12" style="background-color:lightcyan">
+                        <option value="badmimango" >badmimango </option>
+                        <option value="blacksapota">blacksapota</option>
+                        <option value="citronmelon">citronmelon</option>
+                        <option value="custardapple">custardapple</option>
+                        <option value="dasherimango">dasherimango</option>
+                        <option value="dholkapomogranates">dholkapomogranates</option>
+                        <option value="galaapple">galaapple</option>
+                        <option value="gigerinemelon">gigerinemelon</option>
+                        <option value="greensapota">greensapota</option>
+                        <option value="guineagoldpapaya">guineagoldpapaya</option>
+                        <option value="hortusgoldpapaya">hortusgoldpapaya</option>
+                        <option value="kamiyapapaya">kamiyapapaya</option>
+                        <option value="kashmirapple">kashmirapple</option>
+                        <option value="kesarmango">kesarmango</option>
+                        <option value="muskatpomogranates">muskatpomogranates</option>
+                        <option value="mammeysapota">mammeysapota</option>
+                        <option value="nendranbanana">nendranbanana</option>
+                        <option value="poovanbanana">poovanbanana</option>
+                        <option value="rasthalibanana">rasthalibanana</option>
+                        <option value="rubypomogranates">rubypomogranates</option>
+                        <option value="shimlaapple">shimlaapple</option>
+                        <option value="soursopcustardapple">soursopcustardapple</option>
+                        <option value="sweetsoursopcustardapple">sweetsoursopcustardapple</option>
+                    </select>
+                    <br>
+                    <br>
+                    <h3 style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:x-large;color: aliceblue;"><strong>  Vegetables </strong></h3>
+                    <select name="Vegetables" id="Vegetables" multiple size="6" style="background-color:lightcyan;">
+                        <option value="brocoli">brocoli</option>
+                        <option value="brownonion">brownonion</option>
+                        <option value="capsicum">capsicum</option>
+                        <option value="carrot">carrot</option>
+                        <option value="cherrietomato">cherrietomato</option>
+                        <option value="gaajar">gaajar</option>
+                        <option value="greenchilli">greenchilli</option>
+                        <option value="redbellpepper">redbellpepper</option>
+                        <option value="redchilli">redchilli</option>
+                        <option value="redonion">redonion</option>
+                        <option value="springonion">springonion</option>
+                        <option value="tomatohybrid">tomatohybrid</option>
+                        <option value="tomatolocal">tomatolocal</option>
+                        <option value="yellowbellpepper">yellowbellpepper</option>
+                    </select>
+                    <br>
+                    <h3 style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:x-large;color: aliceblue"><Strong> Milk </Strong></h3>
+                    
+                    <select name="Milk" id="Milk" multiple size="3" style="background-color: lightcyan; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                        <option value="buffalomilk">buffalomilk</option>
+                        <option value="cowmilk">cowmilk</option>  
+                        <option value="tonedmilk">tonedmilk</option>
+                    </select>
+                    <h3 style="text-align:center;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:x-large;color: aliceblue;"><strong>Rice </strong></h3>
+                    <select name="Rice" id="Rice" multiple size = "15" style="background-color:lightcyan">
+                        <option value="24mantrabrownrice" >24mantrabrownrice </option>
+                        <option value="24mantraorganicbrownrice">24mantraorganicbrownrice</option>
+                        <option value="24mantraorganicsonamasuribrownrice">24mantraorganicsonamasuribrownrice</option>
+                        <option value="24mantraorganicsonamasuripolishedrice">24mantraorganicsonamasuripolishedrice</option>
+                        <option value="24mantraorganicsonamasurirawrice">24mantraorganicsonamasurirawrice</option>
+                        <option value="24mantraorganicsonamasuririce">24mantraorganicsonamasuririce</option>
+                        <option value="24mantrasonamasuririce">24mantrasonamasuririce</option>
+                        <option value="agrofresheconomysonamasuririce">agrofresheconomysonamasuririce</option>
+                        <option value="basmatibrownrice">basmatibrownrice</option>
+                        <option value="basmatirice">basmatirice</option>
+                        <option value="basmatiricemograbrokentukda">basmatiricemograbrokentukda</option>
+                        <option value="basmatiricesuperpremium">basmatiricesuperpremium</option>
+                        <option value="basmatiricesuperpremiumbiryani">basmatiricesuperpremiumbiryani</option>
+                        <option value="bemisalbasmatirice">bemisalbasmatirice</option>
+                        <option value="bemisalbasmatiricemother’schoice">bemisalbasmatiricemother’schoice</option>
+                        <option value="brownrice">brownrice</option>
+                        <option value="charminarlonggrainbasmatirice">charminarlonggrainbasmatirice</option>
+                        <option value="daawat">daawat</option>
+                        <option value="daawatbasmatibrownrice">daawatbasmatibrownrice</option>
+                        <option value="daawatbasmatirice">daawatbasmatirice</option>
+                        <option value="daawatbasmatiricerozana">daawatbasmatiricerozana</option>
+                        <option value="daawatbasmatiricesuper">daawatbasmatiricesuper</option>
+                        <option value="daawatbrownrice">daawatbrownrice</option>
+                        <option value="daawatrozanagoldbasmatirice">daawatrozanagoldbasmatirice</option>
+                        <option value="daawatsonamasurirawrice">daawatsonamasurirawrice</option>
+                        <option value="daawatsonamasuririce">daawatsonamasuririce</option>
+                        <option value="daawatspecialbasmatirice">daawatspecialbasmatirice</option>
+                        <option value="daawatspecialbiryanibasmatirice">daawatspecialbiryanibasmatirice</option>
+                        <option value="daawatsuperbasmatirice">daawatsuperbasmatirice</option>
+                        <option value="daawattraditionalbasmatirice">daawattraditionalbasmatirice</option>
+                        <option value="fortunebasmatirice">fortunebasmatirice</option>
+                        <option value="fortunebasmatiriceroyaleextralonggold">fortunebasmatiriceroyaleextralonggold</option>
+                        <option value="fortunebasmatiricesuper">fortunebasmatiricesuper</option>
+                        <option value="fortunebasmatiricetraditional">fortunebasmatiricetraditional</option>
+                        <option value="fortuneeverydaybasmatirice">fortuneeverydaybasmatirice</option>
+                        <option value="fortunehameshabasmatirice">fortunehameshabasmatirice</option>
+                        <option value="fortunesonamasuririce">fortunesonamasuririce</option>
+                        <option value="fortunesonamasuriricesupreme">fortunesonamasuriricesupreme</option>
+                        <option value="fortunespecialbiryanibasmatirice">fortunespecialbiryanibasmatirice</option>
+                        <option value="indiagatebasmatirice">indiagatebasmatirice</option>
+                        <option value="kohinoorauthenticbrownbasmatirice">kohinoorauthenticbrownbasmatirice</option>
+                        <option value="kohinoorbasmatiricedubar">kohinoorbasmatiricedubar</option>
+                        <option value="kohinoorbasmatiriceroyaleauthenticbiryani">kohinoorbasmatiriceroyaleauthenticbiryani</option>
+                        <option value="kohinoorbasmatiriceroyaleextralonggold">kohinoorbasmatiriceroyaleextralonggold</option>
+                        <option value="kohinoorbasmatiricerozana">kohinoorbasmatiricerozana</option>
+                        <option value="kohinoorbasmatiricetraditional">kohinoorbasmatiricetraditional</option>
+                        <option value="kohinoorbrownbasmatirice">kohinoorbrownbasmatirice</option>
+                        <option value="kohinoorbrownrice">kohinoorbrownrice</option>
+                        <option value="kohinoorcharminarbasmatirice">kohinoorcharminarbasmatirice</option>
+                        <option value="kohinoorcharminarrozanabasmatirice">kohinoorcharminarrozanabasmatirice</option>
+                        <option value="kohinoorcharminarrozanabasmatiricetibar">kohinoorcharminarrozanabasmatiricetibar</option>
+                        <option value="maandeluxsonamasuririce">maandeluxsonamasuririce</option>
+                        <option value="morebasmatirice">morebasmatirice</option>
+                        <option value="morerawsonamasurisupremerice">morerawsonamasurisupremerice</option>
+                        <option value="naturelandorganicsonamasuririce">naturelandorganicsonamasuririce</option>
+                        <option value="organicbasmatirice">organicbasmatirice</option>
+                        <option value="organicbasmatiricewhite">organicbasmatiricewhite</option>
+                        <option value="organicbrownsonamasuririce">organicbrownsonamasuririce</option>
+                        <option value="organicsonamasuririce">organicsonamasuririce</option>
+                        <option value="organictattva">organictattva</option>
+                        <option value="organictattvabrownbasmatirice">organictattvabrownbasmatirice</option>
+                        <option value="organictattvabrownrice">organictattvabrownrice</option>
+                        <option value="popularessentialsbasmatiricebrown">popularessentialsbasmatiricebrown</option>
+                        <option value="popularessentialsrawbasmatirice">popularessentialsrawbasmatirice</option>
+                        <option value="popularessentialssonamasurirawrice">popularessentialssonamasurirawrice</option>
+                        <option value="premiumbasmatirice">premiumbasmatirice</option>
+                        <option value="premiumbasmatiricebrown">premiumbasmatiricebrown</option>
+                        <option value="premiumbrownrice">premiumbrownrice</option>
+                        <option value="safeharvestsonamasuririce">safeharvestsonamasuririce</option>
+                        <option value="safeharvestunpolishedbrownsonamasuririce">safeharvestunpolishedbrownsonamasuririce</option>
+                        <option value="sonamasuriboiledrice">sonamasuriboiledrice</option>
+                        <option value="sonamasurinewrice">sonamasurinewrice</option>
+                        <option value="sonamasuririce">sonamasuririce</option>
+                        <option value="specialbasmatirice">specialbasmatirice</option>
+                        <option value="vmdsonamasuriricesupreme">vmdsonamasuriricesupreme</option>
+                    </select>
+                    <br>
+                    <br>
+                    <br>
+                    <button id="sub" type="submit">submit</button>
+                    <br>
+                    <br>
+                    <br>
+
+                </form>
+            </div>
+    </div>
+    
+
+<style>
+
+body
+{
+    background-image:url("brooke-cagle-TiTU0k1E0UE-unsplash.jpg");
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
+    background-blend-mode:darken;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-heading{
+    margin: 0;
+}
+
+.heading_font{
+    color:rgb(252, 191, 36);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    font-weight:inherit;
+}
+
+#Fruits {
+    display:inline;
+    color: black;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-inline:inherit ;
+}
+
+#Vegetables {
+    display:ruby-base-container; 
+    color: black;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-inline:inherit ;
+
+}
+
+#Milk {
+    display:ruby-base-container; 
+    color: black;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-inline:inherit ;
+}
+
+#Rice {
+    display:ruby-base-container; 
+    color: black;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-inline:inherit ;
+}
+
+#sub {
+            width: 120px;
+            height: 30px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 15px;
+        }
+
+</style>
+
+</body>
+    </html>
